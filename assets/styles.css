@@ -1,0 +1,50 @@
+.container {    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr;    
+    background-color: #000;
+}
+
+    .container .header {
+        grid-column: 1 / 5;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+    }
+
+        .container .header .header-wrapper {
+            width: 85%;
+            height: 100%;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            /*PENDIENTE*/
+        }
+
+    .container .main-image {
+        grid-column: 1 / 5;
+        background-color: lightcoral;
+    }
+
+    .container .benefits {
+        grid-column: 1 / 5;
+        background-color: lightcyan;
+    }
+
+    .container .preparations {
+        grid-column: 1 / 5;
+        background-color: lightgoldenrodyellow;
+    }
+
+    .container .emergency-contact {
+        grid-column: 1 / 5;
+        background-color: lightgray;
+    }
+
+    .container .footer {
+        grid-column: 1 / 5;
+        background-color: lightgreen;
+    }
+
