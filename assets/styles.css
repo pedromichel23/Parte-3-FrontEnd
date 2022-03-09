@@ -20,6 +20,14 @@
     color: #1f3e72;
 }
 
+.regular-text-color {
+    color: #6d7b93;
+}
+
+
+.image-background-color {
+    background-color: #148ae3;
+}
 .text-font {    
     font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -39,36 +47,47 @@ a {
     letter-spacing: .5px;
 }
 
+.triangle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+}
+
 .container {    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr;    
-    background-color: #000;
+    grid-template-rows: 0.3fr 1.5fr 1fr 1fr 1fr 1fr;    
+    background-color: #fff;
 }
-
+    /* ######################## HEADER ###################### */
     .container .header {
         grid-column: 1 / 5;
-        /* background-color: #fff; */
-        background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,1) 53%, rgba(242,248,253,1) 54%, rgba(231,242,252,1) 100%);
-        display: flex;
-        justify-content: center;
+        /* background-color: #fff; */        
+        /* display: flex;
+        justify-content: center; */
+        display: grid;
+        /* grid-template-columns: repeat(6, 1.5fr); */
+        grid-template-columns: .5fr repeat(4, 1fr) .5fr;
     }
 
         .container .header .header-wrapper {
-            width: 85%;
-            height: 100%;
+            grid-column: 2 / 6;
+            /* width: 85%;
+            height: 100%; */
             /* border: 1px solid #000; */
             display: flex;
-            flex-direction: row;
+            /* flex-direction: row;
             flex-wrap: wrap;
-            align-items: center;            
+            align-items: center; */
+            align-items: center;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 53%, rgba(242,248,253,1) 54%, rgba(231,242,252,1) 100%);            
         }
 
             .container .header .header-wrapper .logo{
                 flex-grow: 4;
                 /* border: 1px solid #000; */
-                text-align: center;
+                text-align: left;
             }
 
                 .container .header .header-wrapper .main-menu{
@@ -103,10 +122,83 @@ a {
                 letter-spacing: 0.5px;
             }
 
+    /* ######################## MAIN - IMAGE ###################### */
     .container .main-image {
         grid-column: 1 / 5;
-        background-color: lightcoral;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: .5fr repeat(4, 1fr) .5fr;
+        padding: 0px;        
+        margin: 0px;
     }
+
+        .container .triangle-wrapper {
+            grid-column: 1 / 2;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }           
+
+        .container .main-image-wrapper {
+            /* width: 85%;
+            height: 100%; */
+            grid-column: 2 / 6;
+            /* border: 1px solid tomato; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;       
+        }
+
+            .container .main-image-wrapper .main-text {
+                /* border: 1px solid #000; */
+                width: 50%;
+                height: 100%;
+                /* background-color: lightblue; */
+            }
+
+                .container .main-image-wrapper .main-text .triangle{
+                    margin-bottom: 1.5rem;
+                }
+
+                .container .main-image-wrapper .main-text .big {
+                    font-size: 4.1rem;
+                    font-weight: 700;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                    .container .main-image-wrapper .main-text .main-regular-text-wrapper {
+                        /* border: 1px solid #000; */
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                    }
+
+                        .container .main-image-wrapper .main-text .main-regular-text-wrapper p {
+                            margin-top: .5rem;
+                            margin-bottom: .5rem;                            
+                        }
+
+                        .container .main-image-wrapper .main-text .main-regular-text-wrapper .triangle {
+                            align-self: flex-end;
+                            justify-self: flex-end;
+                            margin-top: 0;
+                            margin-bottom: 0;                            
+                        }
+
+                        .container .main-image-wrapper .main-text #main-text-row {
+                            flex-direction:row;
+                            justify-content: space-between;
+                        }
+                           
+
+            .container .main-image-wrapper .image-wrapper {                
+                /* border: 1px solid #000; */
+                width: 50%;
+                height: 100%;
+            }
 
     .container .benefits {
         grid-column: 1 / 5;
