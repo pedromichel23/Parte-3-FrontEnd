@@ -28,12 +28,42 @@
 .image-background-color {
     background-color: #148ae3;
 }
+
+.triangle-color {
+    background-color: #f4f6fb;
+}
+
+.yellow-icon {
+    box-shadow: 0px 5px 10px yellow;
+    
+}
+
+/* main-text icons and text START */
+
+#shield {
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+#star {
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.main-icon-text {
+    margin-right: 1rem;
+}
+
+/* main-text icons and text END */
+
 .text-font {    
     font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.2rem;    
 }
 
 .main-titles {
     font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
 }
 
 a {
@@ -47,16 +77,57 @@ a {
     letter-spacing: .5px;
 }
 
+.triangle-up-rigth {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-right: 70px solid #f4f6fb;
+    /* transform: rotate(135deg); */
+    /* border: 1px solid #000; */
+}
+
+.triangle-up-left {
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-left: 70px solid #f4f6fb;    
+    /* border: 1px solid #000; */
+}
+
+.triangle-down-left {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-left: 70px solid transparent;
+    border-bottom: 70px solid #f4f6fb;   
+    /* border: 1px solid #000; */
+}
+
+.triangle-down-right {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-left: 70px solid transparent;
+    border-bottom: 70px solid tomato;   
+    /* border: 1px solid #000; */
+}
+
 .triangle {
-    width: 80px;
-    height: 80px;
+    width: 45px;
+    height: 45px;
+    /* border-right: 45px solid transparent;
+    border-left: 45px solid transparent;
+    border-bottom: 45px solid #000;
+    transform: rotate(45deg); */
     border: 1px solid #000;
 }
 
 .container {    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.3fr 1.5fr 1fr 1fr 1fr 1fr;    
+    grid-template-rows: 0.2fr 1.3fr 1fr 1fr 1fr 1fr;    
     background-color: #fff;
 }
     /* ######################## HEADER ###################### */
@@ -122,7 +193,7 @@ a {
                 letter-spacing: 0.5px;
             }
 
-    /* ######################## MAIN - IMAGE ###################### */
+    /* ######################## MAIN - IMAGE SECTION ###################### */
     .container .main-image {
         grid-column: 1 / 5;
         background-color: #fff;
@@ -159,7 +230,15 @@ a {
             }
 
                 .container .main-image-wrapper .main-text .triangle{
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 1.5rem;                    
+                }
+
+                .container .main-image-wrapper .main-text #star-main-image-text-title {
+                    margin-top: 1rem;
+                }
+
+                .container .main-image-wrapper .main-text #end-main-image-text-title {
+                    margin-bottom: 2rem;
                 }
 
                 .container .main-image-wrapper .main-text .big {
@@ -181,17 +260,34 @@ a {
                             margin-bottom: .5rem;                            
                         }
 
-                        .container .main-image-wrapper .main-text .main-regular-text-wrapper .triangle {
+                        /* Triangulo */
+                        .container .main-image-wrapper .main-text .main-regular-text-wrapper .triangle-maintext-big {
                             align-self: flex-end;
                             justify-self: flex-end;
                             margin-top: 0;
-                            margin-bottom: 0;                            
+                            margin-bottom: 0;
+                            border-top: 120px solid transparent;
+                            border-left: 120px solid transparent;
+                            border-bottom: 120px solid #f4f6fb;
+                            /* width: 0;
+                            height: 0;
+                            border-top: 70px solid transparent;
+                            border-left: 70px solid transparent;
+                            border-bottom: 70px solid tomato; */
+                            /* background-color: tomato;                             */
                         }
 
                         .container .main-image-wrapper .main-text #main-text-row {
                             flex-direction:row;
                             justify-content: space-between;
+
                         }
+
+                            .container .main-image-wrapper .main-text #main-text-row .triangle-maintext-big-2 {
+                                border-left: 120px solid transparent;
+                                border-bottom: 120px solid transparent;
+                                border-right: 120px solid #f4f6fb;
+                            }
                            
 
             .container .main-image-wrapper .image-wrapper {                
@@ -200,10 +296,112 @@ a {
                 height: 100%;
             }
 
+
+    /* ######################## BENEFITS - SECTION - START ###################### */
     .container .benefits {
         grid-column: 1 / 5;
-        background-color: lightcyan;
+        display: grid;
+        grid-template-columns: .5fr repeat(4, 1fr) .5fr;        
+        background-color: #fff;
     }
+
+        .container .benefits .benefits-wrapper {
+            background-color: #fff;
+            grid-column: 2 / 6;
+            margin-top: 5rem;
+        }
+
+            .container .benefits .benefits-wrapper .companies-gallery {
+                display: grid;      
+                /* grid-template-columns: repeat(5, 1fr); */
+                grid-template-columns: 1.15fr 1.15fr 1.15fr 1.15fr .4fr;
+                height: 300px;
+                
+            }
+
+                .container .benefits .benefits-wrapper .companies-gallery .card-company-1 {
+                    grid-column: 1 / 2;
+                    background-color: #fff;
+                    /* border: 1px solid #000; */
+                }
+
+                    .container .benefits .benefits-wrapper .companies-gallery .card-company-1 img {
+                        width: 100%;
+                    }
+
+                .container .benefits .benefits-wrapper .companies-gallery .card-company-2 {
+                    grid-column: 2 / 3;
+                    background-color: #fff;
+                    /* border: 1px solid #000; */
+                }
+
+                    .container .benefits .benefits-wrapper .companies-gallery .card-company-2 img {
+                        width: 100%;
+                    }
+
+                .container .benefits .benefits-wrapper .companies-gallery .card-company-3 {
+                    grid-column: 3 / 4;
+                    background-color: #fff;
+                    /* border: 1px solid #000; */
+                }
+
+                    .container .benefits .benefits-wrapper .companies-gallery .card-company-3 img {
+                        width: 100%;
+                    }
+
+                .container .benefits .benefits-wrapper .companies-gallery .card-company-4 {
+                    grid-column: 4 / 5;
+                    background-color: #fff;
+                    /* border: 1px solid #000; */
+                }
+
+                    .container .benefits .benefits-wrapper .companies-gallery .card-company-4 img {
+                        width: 100%;
+                    }
+
+                .container .benefits .benefits-wrapper .companies-gallery .card-triangle {
+                    grid-column: 5 / 6;
+                    background-color: #fff;
+                    width: 100%;
+                    /* border: 1px solid #000; */
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+
+                    .container .benefits .benefits-wrapper .companies-gallery .card-triangle .triangle-down-left {
+                        border-top: 90px solid transparent;
+                        border-left: 90px solid transparent;
+                        border-bottom: 90px solid #f4f6fb;
+                    }
+
+            .container .benefits .benefits-wrapper .benefits-text .benefits-triangle-wrapper {                
+                display: flex;
+                flex-direction: column;                
+            }
+
+                .container .benefits .benefits-wrapper .benefits-text .benefits-triangle-wrapper .triangle-up-rigth {                    
+                    justify-self: flex-start;
+                    align-self: flex-end;
+                    border-left: 90px solid transparent;
+                    border-bottom: 90px solid transparent;
+                    border-right: 90px solid #f4f6fb;
+                }
+
+                .container .benefits .benefits-wrapper .benefits-text h2 {
+                    margin-top: -105px;
+                    /* margin-bottom: 0;                     */
+                }
+
+                .container .benefits .benefits-wrapper .benefits-text p {
+                    margin-top: 0;
+                    margin-bottom: .8rem;
+                }
+
+
+
+    /* ######################## BENEFITS - SECTION - END ###################### */
+
 
     .container .preparations {
         grid-column: 1 / 5;
