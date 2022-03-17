@@ -6,6 +6,7 @@
     color: #6d7b93;
 }
 
+/*  BUTTONS - START*/
 .blue-buttons-color {
     background-color: #2b4bc9;
     color: #fff;
@@ -15,6 +16,16 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
+
+.ligth-blue-buttons-color {
+    background-color: #f1f5ff;
+    color: #2b4bc9;
+    padding: .9rem 2rem .9rem 2rem;
+    border-radius: 5px;    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+/*  BUTTONS - END*/
 
 .title-color {
     color: #1f3e72;
@@ -72,8 +83,9 @@
     align-items: center;
     height: 100%; 
 }
-/* GENERAL ICONS END*/
+/* GENERAL ICONS - END*/
 
+/* GENERAL FONTS - START */
 .text-font {    
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.2rem;    
@@ -83,6 +95,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
 }
+/* GENERAL FONTS - END */
 
 a {
     text-decoration: none;
@@ -95,14 +108,13 @@ a {
     letter-spacing: .5px;
 }
 
+/* BACKGROUND TRIANGLES IMAGES CONFIGURATION - START*/
 .triangle-up-rigth {
     width: 0;
     height: 0;
     border-left: 70px solid transparent;
     border-bottom: 70px solid transparent;
-    border-right: 70px solid #f4f6fb;
-    /* transform: rotate(135deg); */
-    /* border: 1px solid #000; */
+    border-right: 70px solid #f4f6fb;    
 }
 
 .triangle-up-left {
@@ -143,18 +155,15 @@ a {
 
 .triangle {
     width: 45px;
-    height: 45px;
-    /* border-right: 45px solid transparent;
-    border-left: 45px solid transparent;
-    border-bottom: 45px solid #000;
-    transform: rotate(45deg); */
+    height: 45px;    
     border: 1px solid #000;
 }
+/* BACKGROUND TRIANGLES IMAGES CONFIGURATION - START*/
 
 .container {    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.2fr 1.3fr 1fr 1fr 1fr 1fr;    
+    grid-template-rows: 0.12fr .90fr .85fr .80fr .90fr .3fr;    
     background-color: #fff;
 }
     /* ######################## HEADER ###################### */
@@ -249,6 +258,23 @@ a {
             align-items: center;       
         }
 
+            .container .main-image .main-image-wrapper .image-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-wrap: nowrap;
+            }
+
+            .container .main-image .main-image-wrapper .image-wrapper .image-container {                        
+                width: 100%;
+                height: 90%;
+            }
+
+            .container .main-image .main-image-wrapper .image-wrapper .image-container img {
+                width: 100%;
+                object-fit: cover;
+            }
+
             .container .main-image-wrapper .main-text {
                 /* border: 1px solid #000; */
                 width: 50%;
@@ -287,7 +313,7 @@ a {
                             margin-bottom: .5rem;                            
                         }
 
-                        /* Triangulo */
+                        /* TRIANGLE */
                         .container .main-image-wrapper .main-text .main-regular-text-wrapper .triangle-maintext-big {
                             align-self: flex-end;
                             justify-self: flex-end;
@@ -321,7 +347,23 @@ a {
                 /* border: 1px solid #000; */
                 width: 50%;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
             }
+
+                .container .main-image-wrapper .image-wrapper .image-container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;                    
+                }
+
+                .container .main-image-wrapper .image-wrapper .image-container img {
+                    width: 100%;
+                    object-fit: cover;
+                }
 
 
     /* ######################## BENEFITS - SECTION - START ###################### */
@@ -330,7 +372,7 @@ a {
         display: grid;
         grid-template-columns: .5fr repeat(4, 1fr) .5fr;        
         background-color: #fff;
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }            
 
         .container .benefits .benefits-wrapper {
@@ -531,7 +573,32 @@ a {
 
         .container .preparations .preparations-wrapper .image-preparations {
             grid-column: 1 / 2;
+            display: flex;            
+            justify-content: center;
+            align-items: flex-end;            
+            position: relative;
         }
+
+            .container .preparations .preparations-wrapper .image-preparations .image-preparation-blue-background {                
+                height: 60%;
+                width: 100%;                
+                position: absolute;
+                align-self: flex-end;
+                justify-self: flex-end;
+                z-index: 1;
+            }
+
+            .container .preparations .preparations-wrapper .image-preparations .image-preparations-container {
+                z-index: 2;                
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+                .container .preparations .preparations-wrapper .image-preparations .image-preparations-container img {                    
+                    width: 100%;
+                    object-fit: cover;                    
+                }
 
         .container .preparations .preparations-wrapper .suggestions-wrapper {
             grid-column: 2 / 3;
@@ -609,13 +676,261 @@ a {
 
     /* ######################## PREPARATIONS - SECTION - END ###################### */
 
+    /* ######################## EMERGENCY-CONTACT - SECTION - START ###################### */
     .container .emergency-contact {
         grid-column: 1 / 5;
-        background-color: lightgray;
+        /* background-color: lightgray;         */
+        display: grid;
+        grid-template-columns: .5fr repeat(4, 1fr) .5fr;
     }
 
+        .container .emergency-contact .emergency-wrapper {
+            /* background-color: lightcoral; */
+            grid-column: 2 / 6;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);            
+            grid-template-rows: .2fr .4fr 1fr;
+        }
+
+            .container .emergency-contact .emergency-wrapper .triangle-wrapper1 {
+                grid-column: 1 / 3;                                
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+
+                .container .emergency-contact .emergency-wrapper .triangle-wrapper1 .triangle-down-left-big {
+                    border-top: 12px solid transparent;
+                    border-left: 120px solid transparent;
+                    border-bottom: 120px solid #f4f6fb; 
+
+                }
+
+            .container .emergency-contact .emergency-wrapper .emergency-text {
+                grid-column: 1 / 2;
+            }
+
+                .container .emergency-contact .emergency-wrapper .emergency-text h2 {
+                    margin-top: -30px;
+                }
+
+                .container .emergency-contact .emergency-wrapper .emergency-text p {
+                    line-height: 1rem;
+                }
+
+            .container .emergency-contact .emergency-wrapper .triangle-wrapper2 {
+                grid-column: 2 / 3;
+            }
+
+                .container .emergency-contact .emergency-wrapper .triangle-wrapper2 .triangle-up-rigth-big {
+                    border-left: 120px solid transparent;
+                    border-bottom: 120px solid transparent;
+                    border-right: 120px solid #f4f6fb;
+                }
+
+                .container .emergency-contact .emergency-wrapper .contact-info-wrapper {
+                    grid-column: 1 / 2;
+                    display: flex;
+                    align-items: center;                                                                                                         
+                    /* border: 1px solid #000;                                         */
+                }
+
+                    .container .emergency-contact .emergency-wrapper .contact-info-wrapper .contact-info-gallery { 
+                        height: 65%;
+                        width: 100%;                                            
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                        gap: 1.5rem;                                
+                        justify-content: center;
+                        /* border: 1px solid tomato; */
+                        /* background-color: lightgreen; */
+                        
+                    }
+
+                .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact {                    
+                    border-radius: 5px;
+                    width: 60%;
+                    justify-self: center; 
+                    box-shadow: 0px 5px 10px rgb(223, 223, 223)                
+                }
+
+                    .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text a:hover {
+                        background-color: #2b4bc9;
+                        color: #fff;
+                        padding: .9rem 2rem .9rem 2rem;
+                        border-radius: 5px;
+                        box-shadow: 0px 5px 10px rgb(114, 114, 114);
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 600;                        
+                    }
+
+                    .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text .contact-info-title{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                    }                    
+
+                    .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text .contact-info-title .contact-info {                        
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;                        
+                    }
+
+                        .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text .contact-info-title .contact-info h3 {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            font-weight: 600;
+                        }                       
+
+                        .container .emergency-contact .emergency-wrapper .contact-info-gallery .card-contact .contact-info-text .contact-info-title .contact-info .phone-numbers {
+                            font-size: .9rem;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+
+            .container .emergency-contact .emergency-wrapper .emergency-image {
+                grid-column: 2 / 3;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+                .container .emergency-contact .emergency-wrapper .emergency-image .emergency-background-blue {                    
+                    width: 100%;
+                    height: 60%;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                .container .emergency-contact .emergency-wrapper .emergency-image .emergency-image-container {
+                    height: 100%;
+                    width: 100%;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+
+    /* ######################## EMERGENCY-CONTACT - SECTION - END ###################### */
+
+    /* ######################## FOOTER - SECTION - START ###################### */
     .container .footer {
         grid-column: 1 / 5;
-        background-color: lightgreen;
+        background-color: #eef3ff;
+        display: grid;
+        grid-template-columns: .5fr repeat(4, 1fr) .5fr;
     }
+
+        .container .footer .footer-wrapper {
+            grid-column: 2 / 6;            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1.6fr 1fr;
+        }
+
+        .container .footer .footer-wrapper .footer-info {
+            grid-column: 1 / 3;            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+            .container .footer .footer-wrapper .footer-info .info-text {
+                grid-column: 1 / 2;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+                .container .footer .footer-wrapper .footer-info .info-text .info-text-title .title-info-text-footer {                    
+                    font-size: 2rem;
+                }
+
+                .container .footer .footer-wrapper .footer-info .info-text .info-text-paragraphs .reg-info-text-footer {                    
+                    line-height: 1rem;
+                }
+
+                .container .footer .footer-wrapper .footer-info .info-text .info-text-paragraphs .reg-info-text-footer:first-child {
+                    margin-top: 0;
+                }
+
+            .container .footer .footer-wrapper .footer-info .other-links-gallery {
+                grid-column: 2 / 3;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);                
+            }
+
+                .container .footer .footer-wrapper .footer-info .other-links-gallery .links-card {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+
+                    .container .footer .footer-wrapper .footer-info .other-links-gallery .links-card .title-link-cards {
+                        font-size: 1.5rem;
+                    }                    
+
+        .container .footer .footer-wrapper .copy-terms {
+            grid-column: 1 / 3;            
+            display: grid;
+            grid-template-columns: 1.5fr .5fr;
+        }
+
+            .container .footer .footer-wrapper .copy-terms .copyrigth-text-wrapper {
+                /* border: 1px solid #000; */
+                display: flex;
+                align-items: flex-end;                
+            }
+            
+                .container .footer .footer-wrapper .copy-terms .copyrigth-text-wrapper p {
+                    font-size: 1rem;
+                }
+                
+
+            .container .footer .footer-wrapper .copy-terms .copyrigth-triangle-wrapper {
+                /* border: 1px solid #000; */
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;                
+            }
+
+                .container .footer .footer-wrapper .copy-terms .copyrigth-triangle-wrapper p {
+                    z-index: 2;
+                    font-size: 1rem;
+                }
+
+                .container .footer .footer-wrapper .copy-terms .copyrigth-triangle-wrapper .privacy-text {
+                    margin-left: 1.5rem;
+                }
+
+                .container .footer .footer-wrapper .copy-terms .copyrigth-triangle-wrapper .copyright-triangle {
+                    position: absolute;
+                    z-index: 1;
+                    width: 0;
+                    height: 0;
+                    border-left: 155px solid transparent;
+                    border-right: 155px solid transparent;
+                    border-bottom: 155px solid #e2e9f9;                  
+                    
+                }
+                
+
+    /* ######################## FOOTER - SECTION - END ###################### */
 
